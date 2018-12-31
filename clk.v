@@ -1,0 +1,14 @@
+module CLK(clk);
+
+output reg clk;
+
+always
+  begin
+
+    clk = 1'b1;
+    #100 clk = 1'b0;
+    #100;
+
+    //we do not use last structure because we have 100 ms undefined clock !
+  end
+endmodule
